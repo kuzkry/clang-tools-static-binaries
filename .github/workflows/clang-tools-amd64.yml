@@ -60,8 +60,8 @@ jobs:
 
     - name: cmake
       run: |
-      find -maxdepth 3
-      cmake -S ${{ matrix.release }}/llvm -B ${{ matrix.release }}/build ${{ env.COMMON_CMAKE_ARGS }} ${{ matrix.os-cmake-args }} ${{ matrix.extra-cmake-args }}
+        find -maxdepth 3
+        cmake -S ${{ matrix.release }}/llvm -B ${{ matrix.release }}/build ${{ env.COMMON_CMAKE_ARGS }} ${{ matrix.os-cmake-args }} ${{ matrix.extra-cmake-args }}
     - name: build
       run: cmake --build ${{ matrix.release }}/build ${{ matrix.build-args }} --target clang-tidy
     - name: rename output binary
