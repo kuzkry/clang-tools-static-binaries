@@ -41,7 +41,7 @@ jobs:
       if: ${{ matrix.clang-version == 'dirty' }}
       shell: bash
       run: |
-        hash=23e8a4d16018076e6eed4aa821c020b7fe348c69
+        hash=552eb372cb8198c64caf13da34ca70af894485c8
         git clone https://github.com/llvm/llvm-project.git ${{ matrix.release }}
         cd ${{ matrix.release }}
         git switch -d ${hash}
